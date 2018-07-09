@@ -1,0 +1,5 @@
+MySQL-python==1.2.3
+ipython
+channels==1.1.6
+asgi_redis
+django-cors-headers
