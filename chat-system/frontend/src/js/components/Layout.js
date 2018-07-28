@@ -1,26 +1,19 @@
-import React from "react";
+import React from "react"
 
-import Footer from "./Footer";
-import Header from "./Header";
-import Login from "./Login";
-import {loginService} from "../services/login.service";
+import Footer from "./Footer"
+import Header from "./Header"
+import Login from "./Login"
 
 export default class Layout extends React.Component {
   constructor() {
-    super();
-    this.state = {
-      title: "Welcome",
-    };
-  }
-
-  changeTitle(title) {
-    this.setState({title});
+    super()
   }
 
   render() {
+    let { children } = this.props
     return (
-      <div>
-        <Login login={loginService.login}/>
+      <div className="main-container">
+        {children}
       </div>
     );
   }

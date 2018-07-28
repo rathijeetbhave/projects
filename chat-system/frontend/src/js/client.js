@@ -1,7 +1,19 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react'
+import { render } from 'react-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
+import makeMainRoutes from './routes'
+const appRoot = document.getElementById('app')
+const mainRoutes = makeMainRoutes();
 
-import Layout from "./components/Layout";
+const App = () => (
+  <Router>
+    {mainRoutes}
+  </Router>
+);
 
-const app = document.getElementById('app');
-ReactDOM.render(<Layout/>, app);
+render(
+  (
+    <App />
+  ),
+  appRoot
+);

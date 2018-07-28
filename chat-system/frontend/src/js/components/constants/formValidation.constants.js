@@ -1,0 +1,19 @@
+export const formValidationConstants = {
+  SUCCESS_STATE: "success",
+
+  WARNING_STATE: "warning",
+
+  ERROR_STATE: "error",
+
+  REQUIRED: "REQUIRED",
+
+  EMAIL: "EMAIL",
+
+  EMAILPREQ: "EMAIL + REQUIRED",
+
+  PHONEPREQ: "PHONE + REQUIRED",
+
+  LIMITCHECK: "LIMITCHECK",
+
+  LIMITCHECKPREQ: "LIMITCHECK + REQUIRED"
+}
