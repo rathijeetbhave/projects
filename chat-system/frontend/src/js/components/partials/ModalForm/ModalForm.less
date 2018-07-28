@@ -1,0 +1,121 @@
+@import "../../common/common";
+.modal.fade:not(.in) .modal-dialog {
+  -webkit-transform: translate3d(25%, 0, 0);
+  transform: translate3d(25%, 0, 0);
+}
+
+.custom-modal {
+  float: right;
+  margin: 0 !important;
+  z-index: 100;
+  width: 50% !important;
+  .modal-content {
+    border-radius: 0px;
+    height: 100%;
+    letter-spacing: 0.1em;
+    .modal-header {
+      background: @primary;
+      height: 40px;
+      padding: 10px 15px;
+      .header-text {
+        font-size: 16px;
+        color: #fff;
+        #default-font(400);
+        display: inline-block;
+      }
+      i {
+        float: right;
+        font-size: 20px;
+        font-weight: 100;
+        -webkit-text-stroke: 0px #fff;
+        color: #fff;
+      }
+    }
+    .modal-form {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 15px;
+      p.error {
+        flex: 1 100%;
+        margin-left: 15px;
+        color: red;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        flex: 1 50%;
+      }
+    }
+  }
+}
+
+.custom-modal-single-layer {
+  float: right;
+  margin: 0 !important;
+  z-index: 100;
+  width: 25% !important;
+  .modal-content {
+    border-radius: 0px;
+    height: 100%;
+    letter-spacing: 0.1em;
+    .modal-header {
+      background: @primary;
+      height: 40px;
+      padding: 10px 15px;
+      .header-text {
+        font-size: 16px;
+        color: #fff;
+        #default-font(400);
+        display: inline-block;
+      }
+      i {
+        float: right;
+        font-size: 20px;
+        font-weight: 100;
+        -webkit-text-stroke: 0px #fff;
+        color: #fff;
+      }
+    }
+    .modal-title {
+      background: @light-primary;
+      height: 40px;
+      padding: 10px 15px;
+      .title-text {
+        font-size: 16px;
+        color: #54575a;
+        #default-font(400);
+        display: inline-block;
+      }
+    }
+    .modal-form {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 15px;
+      p.error {
+        flex: 1 100%;
+        margin-left: 15px;
+        color: red;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        flex: 1 100%;
+      }
+    }
+  }
+  &.fixed-height-scroll {
+    height: 100%;
+    .custom-modal-form {
+      margin-bottom: 15px;
+      height: 85%;
+      overflow-y: scroll;
+    }
+  }
+}
+
+.custum-modal-height-override {
+  .custom-modal-single-layer;
+  .modal-content {
+    height: auto;
+  }
+}

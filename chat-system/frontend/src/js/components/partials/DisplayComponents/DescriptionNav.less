@@ -1,0 +1,32 @@
+@import "../../common/common";
+.description-nav {
+  li {
+    margin: 0 !important;
+    height: 35px;
+    width: 1%;
+    min-width: 75px !important;
+    display: inline-block !important;
+  }
+  .active {
+    a {
+      border-radius: 0 !important;
+      background-color: @primary  !important;
+      color: #fff;
+      text-transform: uppercase;
+      border: 1px solid @primary;
+    }
+  }
+  a {
+    font-size: 10px;
+    #default-font(400);
+    border-radius: 0 !important;
+    background-color: @light-grey;
+    border: 1px solid @warm-grey;
+    color: @secondary;
+    text-transform: uppercase;
+    padding: 10px !important;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+}

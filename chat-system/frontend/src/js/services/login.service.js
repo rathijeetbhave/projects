@@ -1,4 +1,5 @@
 import {makeRequest} from "./baseApi.services"
+import { confirmLogin } from "../utils/auth";
 const getHeaders = () => {
 
     let headers = {
@@ -23,12 +24,13 @@ function login(username, password) {
     const auth_url = "http://127.0.0.1:8000/login/";
 
     //console.log( makeRequest(auth_url, options))
-    return makeRequest(auth_url, options)
+    /* return makeRequest(auth_url, options)
         .then(response => {
             console.log(response)
-            //confirmLogin(response.jwt_token)
-            //return response;
-        })
+            confirmLogin(response)
+            return response;
+        }) */
+        confirmLogin('helloiamloggedin')
 }
 
 function logout() {
