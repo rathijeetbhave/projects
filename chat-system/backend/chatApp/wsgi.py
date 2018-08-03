@@ -11,8 +11,14 @@ import os, sys
 
 from django.core.wsgi import get_wsgi_application
 
-sys.path.append('/Users/rathijeetbhave/programs/projects/chat-system/backend/chatApp')
-sys.path.append('/Users/rathijeetbhave/programs/projects/chat-system/backend/venv/lib/python2.7/site-packages/')
+apache_dir = os.path.dirname(__file__)
+project = os.path.dirname(apache_dir)
+workspace = os.path.dirname(project)
+if workspace not in sys.path:
+    sys.path.append(workspace)
+
+#sys.path.append('/Users/rathijeetbhave/programs/projects/chat-system/backend/chatApp')
+#sys.path.append('/Users/rathijeetbhave/programs/projects/chat-system/backend/venv/lib/python2.7/site-packages/')
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "chatApp.settings")
 
