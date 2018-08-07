@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=y79h^_a=z9wjyysdx$$otc7deiyb4e=9v4p@!g4#@)68ekeuc'
+SECRET_KEY = '4n3+s+mx9226c@vy@wcy+a=ra^1n#!#*=s#j$#vrajiu52)@h$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
-    'chatApp.chat_app',
+    'chatApp',
     'channels',
-    'corsheaders'
+    'corsheaders',
 ]
 
 CHANNEL_LAYERS = {
@@ -53,6 +53,7 @@ CHANNEL_LAYERS = {
         'ROUTING': 'chatApp.routing.channel_routing',
     }
 }
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -95,8 +96,7 @@ DATABASES = {
     # 'default': {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # },
-
+    # }
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'chatapp',                      # Or path to database file if using sqlite3.
@@ -126,12 +126,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-REST_FRAMEWORK = {
-   'DEFAULT_AUTHENTICATION_CLASSES': (
-       'rest_framework.authentication.TokenAuthentication',
-   ),
-}
 
 
 # Internationalization

@@ -1,5 +1,5 @@
 from channels import route
-from chatApp.chat_app.consumers import *
+from chatApp.consumers import *
 
 channel_routing = [
     route('websocket.connect', ws_connect),

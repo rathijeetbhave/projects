@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from chatApp.chat_app.serializers import UserSerializer, GroupSerializer, FriendSerializer, ChatSerializer
-from chatApp.chat_app.models import Friend, Chat
+from chatApp.serializers import UserSerializer, GroupSerializer, FriendSerializer, ChatSerializer
+from chatApp.models import Friend, Chat
 from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 from rest_framework import status, mixins

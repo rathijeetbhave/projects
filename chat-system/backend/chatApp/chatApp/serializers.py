@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from chatApp.chat_app.models import Friend, Chat
+from chatApp.models import Friend, Chat
 
 class UserSerializer(serializers.ModelSerializer) :
     def validate(self, data) :
